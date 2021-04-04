@@ -1,0 +1,43 @@
+.media-list {
+  display: flex;
+  justify-content: center;
+}
+
+.media_item {
+  display: block;
+  width: 44px;
+  height: 44px;
+  background-color: rgba(255, 255, 255, 0.1);
+  background-size: 20px;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 50%;
+
+  transition-property: background-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover,
+  &:focus {
+    background-color: $primary-blue-color;
+  }
+}
+
+.media_icon-instagram {
+  background-image: url(../images/media-icons/instagram.svg);
+  margin-right: 10px;
+}
+
+.media_icon-twitter {
+  background-image: url(../images/media-icons/twitter.svg);
+  margin-right: 10px;
+}
+
+.media_icon-facebook {
+  background-image: url(../images/media-icons/facebook.svg);
+  margin-right: 10px;
+}
+
+.media_icon-linkedin {
+  background-image: url(../images/media-icons/linkedin.svg);
+}

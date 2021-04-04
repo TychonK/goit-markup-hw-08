@@ -1,0 +1,75 @@
+.email-input {
+  display: flex;
+  align-items: center;
+  padding-left: 16px;
+  margin: auto;
+
+  width: 100%;
+  max-width: 450px;
+  height: 50px;
+
+  @media (min-width: $pc) {
+    width: 358px;
+  }
+
+  font-size: 16px;
+  line-height: 1.25;
+  letter-spacing: 0.03em;
+  color: rgba(255, 255, 255, 0.6);
+
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  border-radius: 4px;
+}
+
+.subscription-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  letter-spacing: 0.06em;
+
+  margin: 20px auto 0 auto;
+  width: 200px;
+  height: 50px;
+
+  cursor: pointer;
+  background-color: $primary-blue-color;
+  border: none;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 1.87;
+  color: $white;
+
+  transition-property: background;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover,
+  &:focus {
+    background: $btn-hover-color;
+  }
+}
+
+.icon-send {
+  width: 24px;
+  height: 24px;
+
+  margin-left: 10px;
+
+  fill: $white;
+}
+
+@media (min-width: $pc) {
+  .subscription-form {
+    display: flex;
+  }
+
+  .subscription-button {
+    margin: 0;
+    margin-left: 12px;
+  }
+}

@@ -1,0 +1,20 @@
+.services {
+  padding-top: 0;
+  display: none;
+
+  @media (min-width: $pc) {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+.services_title {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.2;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: $primary-titles-color;
+  margin-bottom: 50px;
+  margin-top: 0;
+}

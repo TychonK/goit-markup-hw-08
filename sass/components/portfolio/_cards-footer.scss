@@ -1,0 +1,16 @@
+.card_footer {
+  position: relative;
+  background-color: $white;
+  border: 1px solid #eee;
+  border-top: none;
+  padding: 20px 24px;
+  height: auto;
+}
+
+@media (min-width: $tablet) and (max-width: 1199.9px) {
+
+.card_footer.bugged-footer {
+  height: 146.6px;
+}
+
+}

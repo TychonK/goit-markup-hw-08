@@ -1,0 +1,48 @@
+@import './base/normalize';
+@import './utils/variables';
+
+@import './components/common';
+
+@import './components/header/header';
+@import './components/header/header-logo';
+@import './components/header/nav';
+@import './components/header/header-contacts';
+
+@import './components/hero/hero';
+@import './components/hero/hero-title';
+@import './components/hero/hero-button';
+
+@import './components/modal/modal';
+@import './components/modal/modal-title';
+@import './components/modal/modal-form';
+@import './components/modal/form-inputs';
+@import './components/modal/form-comment';
+@import './components/modal/form-consent';
+@import './components/modal/form-submit';
+
+@import './components/qualities/qualities';
+
+@import './components/services/services';
+@import './components/services/services-list';
+
+@import './components/team/team';
+@import './components/team/team-list';
+@import './components/team/team-card-footer';
+
+@import './components/customers/customers';
+@import './components/customers/customers-list';
+@import './components/customers/logos';
+
+@import './components/footer/footer';
+@import './components/footer/address';
+@import './components/footer/street';
+@import './components/footer/contacts';
+@import './components/footer/footer-media';
+@import './components/footer/subscription';
+
+@import './components/portfolio/filters';
+@import './components/portfolio/cards';
+@import './components/portfolio/cards-footer';
+@import './components/portfolio/overlay';
+
+@import './components/header/mobile-menu';

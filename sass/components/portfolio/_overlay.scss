@@ -1,0 +1,28 @@
+.card_overlay {
+  position: absolute;
+  top: 0;
+  bottom: 110px;
+  left: 0;
+  padding: 63px 24px;
+
+  background: rgba(33, 150, 243, 0.9);
+
+  transform: translatey(100%);
+
+  transition-property: transform;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+  .card:hover &,
+  .card:focus & {
+    transform: translatey(0);
+  }
+}
+
+.overlay_text {
+  font-size: 18px;
+  line-height: 1.56;
+  letter-spacing: 0.03em;
+  margin: 0;
+  color: $white;
+}

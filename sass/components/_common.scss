@@ -1,0 +1,49 @@
+body {
+  color: #000;
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+
+  &.modal-open {
+    overflow: hidden;
+  }
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+button {
+  font-family: inherit;
+}
+
+img {
+  display: block;
+}
+
+.section {
+  padding: 60px 0 60px 0;
+
+  @media (min-width: 1200px) {
+    padding: 94px 0;
+  }
+}
+
+/* Main container style */
+
+.container {
+  margin: 0 auto;
+  padding: 0 15px;
+  width: 100%;
+  
+  @media (min-width: $mobile) and (max-width: 767px) {
+    max-width: 480px;
+  }
+  @media (min-width: $tablet) {
+    width: 768px;
+  }
+  @media (min-width: $pc) {
+    width: 1200px;
+  }
+}

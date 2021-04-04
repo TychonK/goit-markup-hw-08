@@ -1,0 +1,60 @@
+.modal_consent {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 20px;
+  padding-left: 20px;
+
+  font-size: 12px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+  color: $text-gray;
+
+  @media (min-width: $pc) {
+    font-size: 14px;
+  }
+
+  & > .consent_link {
+    color: $primary-blue-color;
+    @media (min-width: $pc) {
+      padding-left: 7px;
+    }
+  }
+}
+
+.consent_input {
+  position: absolute;
+  -webkit-appearance: none;
+  appearance: none;
+  text-align: center;
+}
+
+.check-box {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  cursor: pointer;
+
+  @media (min-width: $pc) {
+    left: 10px;
+  }
+
+  width: 16px;
+  height: 15px;
+
+  border-radius: 4px;
+  border: 2px solid $primary-titles-color;
+}
+
+.consent_input:checked + .check-box {
+  background-image: url(../images/modal-form-icons/check.svg);
+  background-color: $primary-blue-color;
+  border: none;
+}
+
+.consent-text {
+  margin: 0;
+  text-align: center;
+}

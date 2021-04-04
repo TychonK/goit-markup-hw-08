@@ -1,0 +1,117 @@
+.menu-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  z-index: 1;
+
+  padding-top: 48px;
+  padding-bottom: 48px;
+  padding-left: 40px;
+
+  background: $white;
+
+  opacity: 0;
+  pointer-events: none;
+
+  &.is-open {
+    opacity: 1;
+    pointer-events: all;
+  }
+}
+
+/* Pages navigation */
+
+.menu_item {
+  &:not(:first-child) {
+    margin-top: 28px;
+  }
+}
+
+.menu_pages {
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 1.2;
+  letter-spacing: 0.02em;
+  text-decoration: none;
+
+  color: $primary-titles-color;
+
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover,
+  &:focus {
+    color: $primary-blue-color;
+  }
+}
+
+/* Menu Contacts */
+
+.menu_contact-phone {
+  font-weight: 500;
+  font-size: 34px;
+  line-height: 1.2;
+  text-decoration: none;
+
+  letter-spacing: 0.02em;
+
+  color: $primary-blue-color;
+}
+
+.menu_contact-mail {
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 28px;
+  letter-spacing: 0.02em;
+  text-decoration: none;
+
+  margin-top: 32px;
+
+  color: $text-gray;
+}
+
+.contact_item-mail {
+  margin-top: 32px;
+}
+
+.contact_item-phone {
+  margin-top: 302px;
+}
+
+/* Social Media */
+
+.menu_media {
+  margin-top: 64px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.menu_media-item {
+  &:not(:last-child) {
+    border-right: 1px solid rgba(33, 33, 33, 0.2);
+  }
+
+  &:not(:first-child) {
+    padding: 0 10px;
+  }
+
+  &:first-child {
+    padding-right: 10px;
+  }
+}
+
+.menu_media-link {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.2;
+
+  letter-spacing: 0.02em;
+  text-decoration: none;
+
+  color: $primary-blue-color;
+}

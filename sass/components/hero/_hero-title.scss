@@ -1,0 +1,16 @@
+.hero_title {
+  margin: 0;
+  margin-bottom: 30px;
+
+  font-size: 26px;
+  line-height: 1.6;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+
+  color: $white;
+
+  @media (min-width: $pc) {
+    font-size: 44px;
+  }
+}
