@@ -17,6 +17,8 @@
 
   & > .consent_link {
     color: $primary-blue-color;
+    padding-left: 6px;
+    
     @media (min-width: $pc) {
       padding-left: 7px;
     }

@@ -23,7 +23,7 @@
   width: calc(100% - 30px);
   padding: 40px;
 
-  @media (min-width: $mobile) and (max-width: 767px) {
+  @media (min-width: $mobile) and (max-width: 1199px) {
     max-width: 450px;
   }
 
