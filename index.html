@@ -183,7 +183,7 @@
 
                             <h3 class="modal_title">Оставьте свои данные, мы вам перезвоним</h3>
 
-                            <form class="modal_form">
+                            <form class="modal_form" id="modal-form">
 
                                 <label class="form_element">
                                     Имя
@@ -192,7 +192,7 @@
                                         <svg class="element_icon">
                                             <use href="./images/symbol-defs.svg#person-icon"></use>
                                         </svg>
-                                        <input class="form_input" type="name" name="user-name" placeholder="">
+                                        <input class="form_input" type="name" name="user-name" placeholder="" id="name">
 
                                     </div>
                                 </label>
@@ -204,7 +204,7 @@
                                         <svg class="element_icon">
                                             <use href="./images/symbol-defs.svg#phone-icon"></use>
                                         </svg>
-                                        <input class="form_input" type="tel" name="phone-number" placeholder="">
+                                        <input class="form_input" type="tel" name="phone-number" placeholder="" id="telephone">
 
                                     </div>
                                 </label>
@@ -216,14 +216,14 @@
                                         <svg class="element_icon">
                                             <use href="./images/symbol-defs.svg#envelope-icon"></use>
                                         </svg>
-                                        <input class="form_input" type="email" name="email" placeholder="">
+                                        <input class="form_input" type="email" name="email" placeholder="" id="email">
 
                                     </div>
                                 </label>
 
                                 <label class="form_element">
                                     Комментарий
-                                    <textarea class="form_comment" name="commnent" rows placeholder="Введите текст"></textarea>
+                                    <textarea class="form_comment" name="commnent" rows placeholder="Введите текст" id="comment"></textarea>
                                 </label>
 
                                 <label class="modal_consent">
@@ -702,6 +702,7 @@
 
     <script src="./js/modal.js"></script>
     <script src="./js/menu.js"></script>
+    <script src="./js/modal-saves.js"></script>
 
 </body>
 </html>
