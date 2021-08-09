@@ -6,61 +6,44 @@ const refs = {
     form: document.querySelector("#modal-form")
 }
 
-refs.comment.addEventListener("input", onCommentInput)
-refs.name.addEventListener("input", onNameInput)
-refs.telephone.addEventListener("input", onTelInput)
-refs.email.addEventListener("input", onEmailInput)
+let formData = {};
 
 refs.form.addEventListener("submit", onFormSubmit)
+refs.form.addEventListener("input", onFormInput)
 
-
-populateTextarea();
-
-function onCommentInput(evt) {
-    const commentValue = evt.target.value;
-    localStorage.setItem("comment-text", commentValue)
-}
-
-function onNameInput(evt) {
-    const nameValue = evt.target.value;
-    localStorage.setItem("name", nameValue)
-}
-
-function onTelInput(evt) {
-    const telValue = evt.target.value;
-    localStorage.setItem("telephone", telValue)
-}
-
-function onEmailInput(evt) {
-    const emailValue = evt.target.value;
-    localStorage.setItem("email", emailValue)
+function onFormInput(evt) {
+    if ((evt.target.nodeName != "INPUT") && (evt.target.nodeName != "TEXTAREA")) {
+        return;
+    }
+    formData[evt.target.name] = evt.target.value;
+    console.log(formData)
+    localStorage.setItem("form-saved-data", JSON.stringify(formData))
 }
 
 function onFormSubmit(evt) {
     evt.preventDefault();
     evt.target.reset();
-    localStorage.removeItem("comment-text");
-    localStorage.removeItem("name");
-    localStorage.removeItem("telephone");
-    localStorage.removeItem("email")
+    localStorage.removeItem("form-saved-data")
 }
 
 function populateTextarea() {
-    const savedComment = localStorage.getItem("comment-text");
-    const savedName = localStorage.getItem("name");
-    const savedTel = localStorage.getItem("telephone");
-    const savedEmail = localStorage.getItem("email");
+    const savedData = localStorage.getItem("form-saved-data");
+    if (savedData) {
+        const parsedData = JSON.parse(savedData)
+        const inputs = document.querySelectorAll("form input")
+        formData = parsedData;
 
-    if (savedComment) {
-        refs.comment.value = savedComment;
-    }
-    if (savedName) {
-        refs.name.value = savedName;
-    }
-    if (savedTel) {
-        refs.telephone.value = savedTel;
-    }
-    if (savedEmail) {
-        refs.email.value = savedEmail;
+        inputs.forEach((input) => {
+            if (input.name in parsedData) {
+                input.value = parsedData[input.name];
+            }    
+        })
+        if (refs.comment.name in parsedData) {
+            refs.comment.value = parsedData[refs.comment.name]
+        }
+        
+        
     }
 }
+
+populateTextarea();
